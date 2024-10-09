@@ -311,7 +311,7 @@ fpo:hasHeight rdf:type owl:ObjectProperty ;
               rdf:type owl:FunctionalProperty ,
                        owl:AsymmetricProperty ,
                        owl:IrreflexiveProperty ;
-              rdfs:range fpo:Heigth ;
+              rdfs:range fpo:Height ;
               owl:propertyDisjointWith fpo:hasOuterDiameter ;
               rdfs:comment "Relates a component, port or flow to the property Height."@en ;
               rdfs:label "height"@en .
@@ -824,11 +824,11 @@ fpo:HeatLoss rdf:type owl:Class ;
              rdfs:label "Heat loss"@en .
 
 
-###  https://w3id.org/fpo#Heigth
-fpo:Heigth rdf:type owl:Class ;
+###  https://w3id.org/fpo#Height
+fpo:Height rdf:type owl:Class ;
            rdfs:subClassOf fpo:Property ;
            rdfs:comment "The measure of distance between the top and the bottom of an HVAC component or interface."@en ;
-           rdfs:label "Heigth"@en .
+           rdfs:label "Height"@en .
 
 
 ###  https://w3id.org/fpo#InducedAirFlowRate
