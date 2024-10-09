@@ -123,6 +123,10 @@ fso:connectedWith rdf:type owl:ObjectProperty ;
                                            fso:connectedWith
                                            fso:isComponentOf
                                          ) ;
+                  owl:propertyChainAxiom ( fso:hasPort
+                                           fso:connectedWith
+                                           fso:isPortOf
+                                         ) ;
                   rdfs:comment "A generic \"connection\" relation between things."@en ;
                   rdfs:label "connected with"@en .
 
@@ -170,6 +174,10 @@ fso:exchangesFluidWith rdf:type owl:ObjectProperty ;
                                                 fso:exchangesFluidWith
                                                 fso:isComponentOf
                                               ) ;
+                       owl:propertyChainAxiom ( fso:hasPort
+                                                fso:exchangesFluidWith
+                                                fso:isPortOf
+                                              ) ;
                        rdfs:comment "Relation between two things which have a fluid exchange connection"@en ;
                        rdfs:label "exchanges fluid with"@en ,
                                   "udveksler fluid med"@da .
@@ -183,6 +191,10 @@ fso:exchangesHeatWith rdf:type owl:ObjectProperty ;
                                                fso:exchangesHeatWith
                                                fso:isComponentOf
                                              ) ;
+                       owl:propertyChainAxiom ( fso:hasPort
+                                                fso:exchangesHeatWith
+                                                fso:isPortOf
+                                              ) ;
                       rdfs:comment "Relation between two things which have a heat exchange connection"@en ;
                       rdfs:label "exchanges heat with"@en ,
                                  "udveksler varme med"@da .
@@ -195,6 +207,10 @@ fso:feedsFluidTo rdf:type owl:ObjectProperty ;
                  owl:propertyChainAxiom ( fso:hasComponent
                                           fso:feedsFluidTo
                                           fso:isComponentOf
+                                        ) ;
+                 owl:propertyChainAxiom ( fso:hasPort
+                                          fso:feedsFluidTo
+                                          fso:isPortOf
                                         ) ;
                  rdfs:comment "Relation from a thing feeding fluid to the thing it is feeding fluid to."@en ;
                  rdfs:label "feeds fluid to"@en ,
@@ -241,6 +257,10 @@ fso:hasFluidFedBy rdf:type owl:ObjectProperty ;
                                            fso:hasFluidFedBy
                                            fso:isComponentOf
                                          ) ;
+                  owl:propertyChainAxiom ( fso:hasPort
+                                           fso:hasFluidFedBy
+                                           fso:isPortOf
+                                         ) ;
                   rdfs:comment "Relation from a thing that is fed fluid to the thing feeding the fluid."@en ;
                   rdfs:label "has fluid fed by"@en .
 
@@ -253,6 +273,10 @@ fso:hasFluidReturnedBy rdf:type owl:ObjectProperty ;
                                                 fso:hasFluidReturnedBy
                                                 fso:isComponentOf
                                               ) ;
+                       owl:propertyChainAxiom ( fso:hasPort
+                                                fso:hasFluidReturnedBy
+                                                fso:isPortOf
+                                              ) ;
                        rdfs:comment "Relation between a thing that has fluid returned to it and the thing returning the fluid."@en ;
                        rdfs:label "has fluid returned by"@en .
 
@@ -264,6 +288,10 @@ fso:hasFluidSuppliedBy rdf:type owl:ObjectProperty ;
                        owl:propertyChainAxiom ( fso:hasComponent
                                                 fso:hasFluidSuppliedBy
                                                 fso:isComponentOf
+                                              ) ;
+                       owl:propertyChainAxiom ( fso:hasPort
+                                                fso:hasFluidSuppliedBy
+                                                fso:isPortOf
                                               ) ;
                        rdfs:comment "Relation between a thing that has fluid supplied to it and the thing supplying the fluid."@en ;
                        rdfs:label "has fluid supplied by"@en .
@@ -373,6 +401,10 @@ fso:returnsFluidTo rdf:type owl:ObjectProperty ;
                                             fso:returnsFluidTo
                                             fso:isComponentOf
                                           ) ;
+                   owl:propertyChainAxiom ( fso:hasPort
+                                            fso:returnsFluidTo
+                                            fso:isPortOf
+                                          ) ;
                    rdfs:comment "Relation implying logical return flow from a thing to another."@en ;
                    rdfs:label "returnerer fluid til"@da ,
                               "returns fluid to"@en .
@@ -384,6 +416,10 @@ fso:suppliesFluidTo rdf:type owl:ObjectProperty ;
                     owl:propertyChainAxiom ( fso:hasComponent
                                              fso:suppliesFluidTo
                                              fso:isComponentOf
+                                           ) ;
+                    owl:propertyChainAxiom ( fso:hasPort
+                                             fso:suppliesFluidTo
+                                             fso:isPortOf
                                            ) ;
                     rdfs:comment "Relation implying logical supply flow from a thing to another."@en ;
                     rdfs:label "forsyner fluid til"@da ,
@@ -398,6 +434,10 @@ fso:transfersHeatFrom rdf:type owl:ObjectProperty ;
                                                fso:transfersHeatFrom
                                                fso:isComponentOf
                                              ) ;
+                      owl:propertyChainAxiom ( fso:hasPort
+                                               fso:transfersHeatFrom
+                                               fso:isPortOf
+                                             ) ;
                       rdfs:comment "Relation signifying heat exchange with intended or actual direction of heat transfer from the second entity to the first. For example, a cooling coil is intended to absorb the heat from air."@en ;
                       rdfs:label "transfers heat from"@en .
 
@@ -408,6 +448,10 @@ fso:transfersHeatTo rdf:type owl:ObjectProperty ;
                     owl:propertyChainAxiom ( fso:hasComponent
                                              fso:transfersHeatTo
                                              fso:isComponentOf
+                                           ) ;
+                    owl:propertyChainAxiom ( fso:hasPort
+                                             fso:transfersHeatTo
+                                             fso:isPortOf
                                            ) ;
                     rdfs:comment "Relation signifying heat exchange with intended or actual direction of heat transfer from the first entity to the second. For example, a radiator is intended to transfer heat to the surroundings."@en ;
                     rdfs:label "transfers heat to"@en .
