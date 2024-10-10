@@ -102,6 +102,10 @@ fso:connectedWith rdf:type owl:ObjectProperty ;
                   owl:propertyChainAxiom ( fso:hasComponent
                                            fso:connectedWith
                                            fso:isComponentOf
+                                         ) ,
+                                         ( fso:hasPort
+                                           fso:connectedWith
+                                           fso:isPortOf
                                          ) ;
                   rdfs:comment "A generic \"connection\" relation between things."@en ;
                   rdfs:label "connected with"@en .
