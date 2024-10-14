@@ -190,7 +190,7 @@ fso:feedsFluidTo rdf:type owl:ObjectProperty ;
                                           fso:isComponentOf
                                         ) ,
                                         ( fso:hasPort
-                                          fso:feedsFluidTo
+                                          fso:hasFluidFedBy
                                           fso:isPortOf
                                         ) ;
                  rdfs:comment "Relation from a thing feeding fluid to the thing it is feeding fluid to."@en ;
