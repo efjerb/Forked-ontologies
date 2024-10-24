@@ -167,7 +167,19 @@ fso:exchangesFluidWith rdf:type owl:ObjectProperty ;
                                   "udveksler fluid med"@da .
 
 
-###  https://w3id.org/fso#exchangesHeatWith
+###  https://w3id.org/fso#exchangesFluidWith
+fso:exchangesFluidWith2 rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf fso:connectedWith ;
+                       rdf:type owl:SymmetricProperty ;
+                       owl:propertyChainAxiom ( fso:hasPort
+                                                fso:exchangesFluidWith
+                                                fso:isPortOf
+                                              ) ;
+                       rdfs:comment "Test of property chain axioms"@en ;
+                       rdfs:label "exchanges fluid with"@en ,
+                                  "udveksler fluid med"@da .
+
+###  https://w3id.org/fso#exchangesHeatWith2
 fso:exchangesHeatWith rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf fso:connectedWith ;
                       rdf:type owl:SymmetricProperty ;
