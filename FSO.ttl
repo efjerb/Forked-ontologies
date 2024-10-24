@@ -179,7 +179,7 @@ fso:exchangesFluidWith2 rdf:type owl:ObjectProperty ;
                        rdfs:label "exchanges fluid with"@en ,
                                   "udveksler fluid med"@da .
 
-###  https://w3id.org/fso#exchangesHeatWith2
+###  https://w3id.org/fso#exchangesHeatWith
 fso:exchangesHeatWith rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf fso:connectedWith ;
                       rdf:type owl:SymmetricProperty ;
