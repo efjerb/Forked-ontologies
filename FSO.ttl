@@ -99,11 +99,7 @@ bot:interfaceOf rdf:type owl:ObjectProperty ;
 fso:connectedWith rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdf:type owl:SymmetricProperty ;
-                  owl:propertyChainAxiom ( fso:hasComponent
-                                           fso:connectedWith
-                                           fso:isComponentOf
-                                         ) ,
-                                         ( fso:hasPort
+                  owl:propertyChainAxiom ( fso:hasPort
                                            fso:connectedWith
                                            fso:isPortOf
                                          ) ;
@@ -138,11 +134,7 @@ fso:connectsTo rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/fso#exchangesElectricChargeWith
 fso:exchangesElectricChargeWith rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf fso:connectedWith ;
-                                owl:propertyChainAxiom ( fso:hasComponent
-                                                         fso:exchangesElectricChargeWith
-                                                         fso:isComponentOf
-                                                       ) ,
-                                                       ( fso:hasPort
+                                owl:propertyChainAxiom ( fso:hasPort
                                                          fso:exchangesElectricChargeWith
                                                          fso:isPortOf
                                                        ) ;
@@ -154,11 +146,7 @@ fso:exchangesElectricChargeWith rdf:type owl:ObjectProperty ;
 fso:exchangesFluidWith rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf fso:connectedWith ;
                        rdf:type owl:SymmetricProperty ;
-                       owl:propertyChainAxiom ( fso:hasComponent
-                                                fso:exchangesFluidWith
-                                                fso:isComponentOf
-                                              ) ,
-                                              ( fso:hasPort
+                       owl:propertyChainAxiom ( fso:hasPort
                                                 fso:exchangesFluidWith
                                                 fso:isPortOf
                                               ) ;
@@ -183,10 +171,6 @@ fso:exchangesFluidWith2 rdf:type owl:ObjectProperty ;
 fso:exchangesHeatWith rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf fso:connectedWith ;
                       rdf:type owl:SymmetricProperty ;
-                      owl:propertyChainAxiom ( fso:hasComponent
-                                               fso:exchangesHeatWith
-                                               fso:isComponentOf
-                                             ) ;
                       rdfs:comment "Relation between two things which have a heat exchange connection"@en ;
                       rdfs:label "exchanges heat with"@en ,
                                  "udveksler varme med"@da .
@@ -197,11 +181,7 @@ fso:feedsFluidTo rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf fso:exchangesFluidWith ;
                  owl:inverseOf fso:hasFluidFedBy ;
                  rdf:type owl:AsymmetricProperty ;
-                 owl:propertyChainAxiom ( fso:hasComponent
-                                          fso:feedsFluidTo
-                                          fso:isComponentOf
-                                        ) ,
-                                        ( fso:hasPort
+                 owl:propertyChainAxiom ( fso:hasPort
                                           fso:feedsFluidTo
                                           fso:isPortOf
                                         ) ;
@@ -248,11 +228,7 @@ fso:hasFlow rdf:type owl:ObjectProperty ;
 fso:hasFluidFedBy rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf fso:exchangesFluidWith ;
                   rdf:type owl:AsymmetricProperty ;
-                  owl:propertyChainAxiom ( fso:hasComponent
-                                           fso:hasFluidFedBy
-                                           fso:isComponentOf
-                                         ) ,
-                                         ( fso:hasPort
+                  owl:propertyChainAxiom ( fso:hasPort
                                            fso:hasFluidFedBy
                                            fso:isPortOf
                                          ) ;
@@ -265,11 +241,7 @@ fso:hasFluidReturnedBy rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf fso:hasFluidFedBy ;
                        owl:inverseOf fso:returnsFluidTo ;
                        rdf:type owl:AsymmetricProperty ;
-                       owl:propertyChainAxiom ( fso:hasComponent
-                                                fso:hasFluidReturnedBy
-                                                fso:isComponentOf
-                                              ) ,
-                                              ( fso:hasPort
+                       owl:propertyChainAxiom ( fso:hasPort
                                                 fso:hasFluidReturnedBy
                                                 fso:isPortOf
                                               ) ;
@@ -282,11 +254,7 @@ fso:hasFluidSuppliedBy rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf fso:hasFluidFedBy ;
                        owl:inverseOf fso:suppliesFluidTo ;
                        rdf:type owl:AsymmetricProperty ;
-                       owl:propertyChainAxiom ( fso:hasComponent
-                                                fso:hasFluidSuppliedBy
-                                                fso:isComponentOf
-                                              ) ,
-                                              ( fso:hasPort
+                       owl:propertyChainAxiom ( fso:hasPort
                                                 fso:hasFluidSuppliedBy
                                                 fso:isPortOf
                                               ) ;
@@ -420,11 +388,7 @@ fso:isSubSystemOf rdf:type owl:ObjectProperty ;
 fso:returnsFluidTo rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf fso:feedsFluidTo ;
                    rdf:type owl:AsymmetricProperty ;
-                   owl:propertyChainAxiom ( fso:hasComponent
-                                            fso:returnsFluidTo
-                                            fso:isComponentOf
-                                          ) ,
-                                          ( fso:hasPort
+                   owl:propertyChainAxiom ( fso:hasPort
                                             fso:returnsFluidTo
                                             fso:isPortOf
                                           ) ;
@@ -437,11 +401,7 @@ fso:returnsFluidTo rdf:type owl:ObjectProperty ;
 fso:suppliesFluidTo rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf fso:feedsFluidTo ;
                     rdf:type owl:AsymmetricProperty ;
-                    owl:propertyChainAxiom ( fso:hasComponent
-                                             fso:suppliesFluidTo
-                                             fso:isComponentOf
-                                           ) ,
-                                           ( fso:hasPort
+                    owl:propertyChainAxiom ( fso:hasPort
                                              fso:suppliesFluidTo
                                              fso:isPortOf
                                            ) ;
@@ -455,10 +415,6 @@ fso:transfersHeatFrom rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf fso:exchangesHeatWith ;
                       owl:inverseOf fso:transfersHeatTo ;
                       rdf:type owl:AsymmetricProperty ;
-                      owl:propertyChainAxiom ( fso:hasComponent
-                                               fso:transfersHeatFrom
-                                               fso:isComponentOf
-                                             ) ;
                       rdfs:comment "Relation signifying heat exchange with intended or actual direction of heat transfer from the second entity to the first. For example, a cooling coil is intended to absorb the heat from air."@en ;
                       rdfs:label "transfers heat from"@en .
 
@@ -467,10 +423,6 @@ fso:transfersHeatFrom rdf:type owl:ObjectProperty ;
 fso:transfersHeatTo rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf fso:exchangesHeatWith ;
                     rdf:type owl:AsymmetricProperty ;
-                    owl:propertyChainAxiom ( fso:hasComponent
-                                             fso:transfersHeatTo
-                                             fso:isComponentOf
-                                           ) ;
                     rdfs:comment "Relation signifying heat exchange with intended or actual direction of heat transfer from the first entity to the second. For example, a radiator is intended to transfer heat to the surroundings."@en ;
                     rdfs:label "transfers heat to"@en .
 
